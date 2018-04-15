@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+		        %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36}:%n --- %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="revenue.recognition" level="debug" />
+
+	<logger name="org.springframework" level="warn" />
+	<logger name="org.springframework.web" level="info" />
+	<logger name="org.springframework.http" level="debug" />
+
+	<logger name="org.springframework.orm.jpa" level="info" />
+	<logger name="org.springframework.transaction.interceptor" level="warn" />
+	<logger name="org.hibernate" level="warn" />
+	<logger name="org.hibernate.SQL" level="debug"></logger>
+	<!--
+	<logger name="org.hibernate.type.descriptor.sql" level="trace" />
+	-->
+
+	<root level="info">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>
